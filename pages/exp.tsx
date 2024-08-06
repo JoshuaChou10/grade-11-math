@@ -77,6 +77,8 @@ function Exponents() {
     <div className="flex justify-between">
       <div className="w-3/5">
         <h2 className="text-2xl font-bold mb-4">Exponent Laws Review</h2>
+        <h3 className="text-1xl mb-4">When answering use the ^ symbol for exponents eg. x^5</h3>
+
         <div className={`slide-container ${slide ? 'slide-out' : 'slide-in'}`}>
           {currentQuestionIndex < questions.length ? (
             <div>
@@ -88,6 +90,7 @@ function Exponents() {
                 placeholder="Your answer" 
                 className="border p-2 mb-2 text-black"
               />
+              <br></br>
               <button onClick={handleAnswerSubmit} className="bg-blue-500 text-white py-1 px-4 rounded">Submit</button>
               {feedback && (
                 <>
@@ -99,7 +102,7 @@ function Exponents() {
               )}
             </div>
           ) : (
-            <p>You've completed all the questions!</p>
+            <p>You completed all the questions!</p>
           )}
         </div>
       </div>
